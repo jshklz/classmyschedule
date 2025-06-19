@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+
+  <h2>ClassMyCalendar</h2>
+  <p class="note">Exports DraftMySchedule classes as an .ical file for usage on calendar apps.</p>
+
+   <div class="usage-toggle-container">
+    <button class="usage-toggle-btn" id="toggleUsageBtn">Show Usage</button>
+  </div>
+
+   <div class="hidden" id="usageBox">
+    <p>
+      The extension will duplicate the events starting from the 'Start Date' to the 'End Date'.
+      <br><br>
+      You will receive a .ical file, which can be imported to Google Calendar, Apple Calendar, Outlook Calendar, Notion (with a third-party tool), and any calendar service that supports it!
+      <br><br>
+      To see the academic calendar for this year: https://www.westerncalendar.uwo.ca/
+    </p>
+  </div>
+  
+
+  <div class="section">
+    <h3>Fall Term</h3>
+    <label>Start Date:<input type="date" id="fallStart" /></label>
+    <label>End Date: <input type="date" id="fallEnd" /></label>
+    <button id="fall">Export Fall</button>
+  </div>
+
+  <div class="section">
+    <h3>Winter Term</h3>
+    <label>Start Date: <input type="date" id="winterStart" /></label>
+    <label>End Date: <input type="date" id="winterEnd" /></label>
+    <button id="winter">Export Winter</button>
+  </div>
+
+  <div id="progress" class="progress hidden">
+    <div class="spinner"></div>
+    <p>You should see a 'download' window soon!</p>
+  </div>
+
+  <p class="note">ERTW ifykyk, last updated in 2025 - June. Not Affiliated with Western University, or DraftMySchedule.</p>
+
+  <script src="popup.js"></script>
+</body>
+</html>
