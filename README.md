@@ -1,10 +1,37 @@
-# ClassMySchedule
+<div align="center">
 
-This is for the students at the University of Western Ontario to export classes from their DraftMySchedule over to any calendar apps. 
+  <img src="icon.png" alt="logo" width="200" height="auto" />
+  <h1>ClassMySchedule</h1>
+  
+  <p>
+    For the students at the University of Western Ontario to export classes from their DraftMySchedule over to any calendar apps
+  </p>
+  
+<p>
+  <a href="https://github.com/jshklz/classmyschedule/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/jshklz/classmyschedule" alt="contributors" />
+  </a>
+  <a href="">
+    <img src="https://img.shields.io/github/last-commit/jshklz/classmyschedule" alt="last update" />
+  </a>
+  <a href="https://github.com/jshklz/classmyschedule/network/members">
+    <img src="https://img.shields.io/github/forks/jshklz/classmyschedule" alt="forks" />
+  </a>
+  <a href="https://github.com/jshklz/classmyschedule/stargazers">
+    <img src="https://img.shields.io/github/stars/jshklz/classmyschedule" alt="stars" />
+  </a>
+  <a href="https://github.com/jshklz/classmyschedule/issues/">
+    <img src="https://img.shields.io/github/issues/jshklz/classmyschedule" alt="open issues" />
+  </a>
+  <a href="https://github.com/jshklz/classmyschedule/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/jshklz/classmyschedule" alt="license" />
+  </a>
+</p>
 
 
 This is most likely the first, and last update, and any layout changes done on DraftMySchedule may cause this extension to break. This app takes advantage of scraping the Class List that's below the visual view of the calendar. If DraftMySchedule decides to remove that, or change how it's rendered, the extension will most likely not work. 
 
+</div>
 
 # How To Install?
 
