@@ -6,6 +6,7 @@
   <p>
     For the students at the University of Western Ontario to export classes from their DraftMySchedule over to any calendar apps
   </p>
+
   
 <p>
   <a href="https://github.com/jshklz/classmyschedule/graphs/contributors">
@@ -35,6 +36,11 @@ This is most likely the first, and last update, and any layout changes done on D
 
 # How To Install?
 
+> [!WARNING] 
+> I've been recently reminded about the Chrome deprecation of Manifest V2 in favor of Manifest V3, and the slow but gradual process they have been phasing out Manifest V2.
+> If, by any means, you are not able to run this extension on Chrome, switch to a Manifest V2-compatible browser, like Brave, until an update is released to the extension which will make it compatable for Manifest V3. 
+> Sorry about this! 
+
 To install on any Chromium-based (like Brave) web browser, follow the steps:
 
 1. Donwload this GitHub Repository, extract it
@@ -53,10 +59,9 @@ To install on any Chromium-based (like Brave) web browser, follow the steps:
 I do have plans on releasing the extension on Google Webstore, but I heard that's a tedious process and so far haven't gone around doing it.
 
 
+# Wow, I really like your project. How do I donate?
 
-# Wow, I really like your project. How do I donate.
-
-**I don't want your money** rather, what I want is you to support me is to help your community, this includes, but not limited to: 
+If you'd like to support me, consider doing any of the following (but not limited to):
 
 1. Donating to charity
 2. Helping the elderly in your community
