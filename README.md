@@ -40,15 +40,11 @@ To install on any Chromium-based (like Brave) web browser, follow the steps:
 
 1. Donwload this GitHub Repository, extract it
 
-2. Go to chrome://settings
+2. Go to chrome://extensions
 
-3. Click on 'Extensions'
+3. Click on 'Load Unpacked'
 
-4. Click on 'Manage Extensions'
-
-5. Click on 'Load Unpacked'
-
-6. Find the folder that the repository was extracted to, and click Select.
+4. Find the folder that the repository was extracted to, and click Select.
 
 
 I do have plans on releasing the extension on Google Webstore, but I heard that's a tedious process and so far haven't gone around doing it.
