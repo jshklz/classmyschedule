@@ -36,11 +36,6 @@ This is most likely the first, and last update, and any layout changes done on D
 
 # How To Install?
 
-> [!WARNING] 
-> I've been recently reminded about the Chrome deprecation of Manifest V2 in favor of Manifest V3, and the slow but gradual process they have been phasing out Manifest V2.
-> If, by any means, you are not able to run this extension on Chrome, switch to a Manifest V2-compatible browser, like Brave, until an update is released to the extension which will make it compatable for Manifest V3. 
-> Sorry about this! 
-
 To install on any Chromium-based (like Brave) web browser, follow the steps:
 
 1. Donwload this GitHub Repository, extract it
