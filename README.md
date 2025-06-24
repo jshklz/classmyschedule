@@ -42,9 +42,11 @@ To install on any Chromium-based (like Brave) web browser, follow the steps:
 
 2. Go to chrome://extensions
 
-3. Click on 'Load Unpacked'
+3. Enable developer mode! It's a slider that should be located on the top right
 
-4. Find the folder that the repository was extracted to, and click Select.
+4. Click on 'Load Unpacked'
+
+5. Find the folder that the repository was extracted to, and click Select.
 
 
 I do have plans on releasing the extension on Google Webstore, but I heard that's a tedious process and so far haven't gone around doing it.
