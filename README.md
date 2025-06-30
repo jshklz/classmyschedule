@@ -28,7 +28,7 @@
     <img src="https://img.shields.io/github/license/jshklz/classmyschedule" alt="license" />
   </a>
 </p>
-
+ 
 
 This is most likely the first, and last update, and any layout changes done on DraftMySchedule may cause this extension to break. This app takes advantage of scraping the Class List that's below the visual view of the calendar. If DraftMySchedule decides to remove that, or change how it's rendered, the extension will most likely not work. Here's a video of it working: https://streamable.com/z9o52y
 
@@ -38,7 +38,7 @@ This is most likely the first, and last update, and any layout changes done on D
 
 To install on any Chromium-based (like Brave) web browser, follow the steps:
 
-1. Donwload this GitHub Repository, extract it
+1. Download this GitHub Repository, extract it
 
 2. Go to chrome://extensions
 
