@@ -46,33 +46,26 @@ function parseTable(table, sessionName, rangeStart, rangeEnd) {
     const startTime = parseTime(startStr);
     const endTime = parseTime(endStr);
 
-    let current = new Date(rangeStart);
-    while (current <= rangeEnd) {
-      const eventDate = getNextWeekday(current, dayNum);
-      const startDate = new Date(eventDate);
-      startDate.setHours(startTime.hours, startTime.minutes, 0, 0);
+    const firstDate = getNextWeekday(new Date(rangeStart), dayNum);
+    const startDate = new Date(firstDate);
+    startDate.setHours(startTime.hours, startTime.minutes, 0, 0);
 
-      const endDate = new Date(eventDate);
-      endDate.setHours(endTime.hours, endTime.minutes, 0, 0);
+    const endDate = new Date(firstDate);
+    endDate.setHours(endTime.hours, endTime.minutes, 0, 0);
 
-      if (startDate > rangeEnd) break;
-
-      events.push(makeEvent({
-        title,
-        location,
-        start: startDate,
-        end: endDate,
-        description: `${type} with ${prof} in ${location}`
-      }));
-
-      current.setDate(current.getDate() + 7);
-    }
+    events.push(makeEvent({
+      title,
+      location,
+      start: startDate,
+      end: endDate,
+      until: new Date(rangeEnd.setHours(23, 59, 59)),
+      description: `${type} with ${prof} in ${location}`
+    }));
   });
 
   return events;
 }
 
- 
 function parseTime(timeStr) {
   const [time, meridian] = timeStr.trim().split(' ');
   let [hours, minutes] = time.split(':').map(Number);
@@ -104,23 +97,26 @@ function toICALDateString(date) {
     pad(date.getSeconds())
   );
 }
-
-function makeEvent({ title, location, start, end, description }) {
+function makeEvent({ title, location, start, end, until, description }) {
   const uid = `${start.getTime()}-${title.replace(/\s+/g, '_')}@classmycalendar`;
   const dtstamp = toICALDateString(new Date());
+  const untilStr = toICALDateString(until);
 
   return [
     "BEGIN:VEVENT",
     `UID:${uid}`,
     `DTSTAMP:${dtstamp}`,
     `SUMMARY:${title || "Untitled Class"}`,
-    `DTSTART:${toICALDateString(start)}`,
-    `DTEND:${toICALDateString(end)}`,
+    `DTSTART;TZID=America/Toronto:${toICALDateString(start)}`,
+    `DTEND;TZID=America/Toronto:${toICALDateString(end)}`,
+    `RRULE:FREQ=WEEKLY;UNTIL=${untilStr}`,
+    `SEQUENCE:0`,
     `LOCATION:${location}`,
     `DESCRIPTION:${description}`,
     "END:VEVENT"
   ].join("\r\n");
 }
+
 
 function makeICS(events, prodid) {
   const timezoneBlock = [
