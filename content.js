@@ -7,9 +7,17 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   }
 
   const mode = action.includes("fall") ? "fall" : "winter";
-  extractEvents(mode, new Date(startDate), new Date(endDate));
+  extractEvents(mode, parseLocalDate(startDate), parseLocalDate(endDate));
+  
+
   sendResponse();  
 });
+
+function parseLocalDate(dateStr) {
+  const [year, month, day] = dateStr.split('-').map(Number);
+  return new Date(year, month - 1, day);
+}
+
 
 function extractEvents(mode, rangeStart, rangeEnd) {
   const allTables = document.querySelectorAll('table.table-bordered');
@@ -32,19 +40,21 @@ function parseTable(table, sessionName, rangeStart, rangeEnd) {
     if (!html) return;
 
     const title = (html.match(/<h5>(.*?)<\/h5>/) || [])[1]?.trim();
-    const [startStr, endStr] = (html.match(/Time:.*?(\d{1,2}:\d{2} [AP]M) - (\d{1,2}:\d{2} [AP]M)/) || []).slice(1);
+    const [startTimeStr, endTimeStr] = (html.match(/Time:.*?(\d{1,2}:\d{2} [AP]M) - (\d{1,2}:\d{2} [AP]M)/) || []).slice(1);
     const dayStr = (html.match(/Day:.*?>(\w+)</) || [])[1]?.trim();
-    const location = (html.match(/Location:.*?>([^<]*)</) || [])[1]?.trim() || "TBD";
-    const prof = (html.match(/Instructor:.*?>([^<]*)</) || [])[1]?.trim() || "Unknown";
-    const type = (html.match(/Type:.*?>([^<]*)</) || [])[1]?.trim() || "Session";
+    
+    // FIX: add '\s' to avoid picking up spaces after <\b> before </span>
+    const location = (html.match(/Location:.*?>([^<\s]*)</) || [])[1]?.trim() || "TBD";
+    const prof = (html.match(/Instructor:.*?>([^<\s]*)</) || [])[1]?.trim() || "Unknown";
+    const type = (html.match(/Type:.*?>([^<\s]*)</) || [])[1]?.trim() || "Session";
 
-    if (!title || !startStr || !endStr || !dayStr) return;
+    if (!title || !startTimeStr || !endTimeStr || !dayStr) return;
 
     const dayNum = getDayNumber(dayStr);
     if (dayNum === -1) return;
 
-    const startTime = parseTime(startStr);
-    const endTime = parseTime(endStr);
+    const startTime = parseTime(startTimeStr);
+    const endTime = parseTime(endTimeStr);
 
     const firstDate = getNextWeekday(new Date(rangeStart), dayNum);
     const startDate = new Date(firstDate);
