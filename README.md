@@ -30,7 +30,10 @@
 </p>
  
 
-This is most likely the first, and last update, and any layout changes done on DraftMySchedule may cause this extension to break. This app takes advantage of scraping the Class List that's below the visual view of the calendar. If DraftMySchedule decides to remove that, or change how it's rendered, the extension will most likely not work. Here's a video of it working: https://streamable.com/z9o52y
+Any layout changes done on DraftMySchedule may cause this extension to break. This app takes advantage of scraping the Class List that's below the visual view of the calendar. If DraftMySchedule decides to remove that, or change how it's rendered, the extension will most likely not work.
+
+SUPPORT TIMELINE: 'classmyschedule' will remain supported for roughly till 2029/2030 or whether Western has internally implemented these features onto DraftMySchedule. If you want the extension to last longer, you are always welcomed to fork the extension and fix any issues. 
+
 
 </div>
 
@@ -50,6 +53,7 @@ To install on any Chromium-based (like Brave) web browser, follow the steps:
 
 
 I do have plans on releasing the extension on Google Webstore, but I heard that's a tedious process and so far haven't gone around doing it.
+
 
 
 # Wow, I really like your project. How do I donate?
