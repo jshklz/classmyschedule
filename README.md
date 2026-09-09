@@ -37,6 +37,10 @@ SUPPORT TIMELINE: 'classmyschedule' will remain supported for roughly till 2029/
 
 </div>
 
+
+> [!NOTE]  
+> If the extension is not working, you might want to disable other extension(s) you may have as it might be conflicting with the ClassMySchedules' extension. For any other problems, raise an issue on the Github. 
+
 # How To Install?
 
 To install on any Chromium-based (like Brave) web browser, follow the steps:
