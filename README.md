@@ -59,6 +59,10 @@ To install on any Chromium-based (like Brave) web browser, follow the steps:
 I do have plans on releasing the extension on Google Webstore, but I heard that's a tedious process and so far haven't gone around doing it.
 
 
+# How to Use
+
+Please navigate to DraftMySchedule, and then click on the **My Current Schedule** section. Afterwards, adhere closely to the video's instructions. https://www.youtube.com/watch?v=svZQJvF7gnI
+
 
 # Wow, I really like your project. How do I donate?
 
